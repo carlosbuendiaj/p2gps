@@ -38,7 +38,7 @@ jobs:
        working-directory: src/Backend/OrderService
        run: ./gradlew build test
        
-       - name: dockerizar el front y el backend
+     - name: dockerizar el front y el backend
        run: |
           cp src/Clients/build/libs/*.war deploy/docker/Clients/drop
           docker build -t p2gps/web deploy/docker/Clients
