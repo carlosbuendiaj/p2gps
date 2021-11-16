@@ -65,3 +65,6 @@ buildinfo.properties
 
 _site
 
+#eliminando todas las subcarpetas
+./builds/libs
+

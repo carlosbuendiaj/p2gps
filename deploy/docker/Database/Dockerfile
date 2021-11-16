@@ -1,7 +1,9 @@
-FROM mongo
+FROM mongo:3.4
 
-MAINTAINER juliens@microsoft.com
+MAINTAINER cralos1998@hotmail.com
 
-COPY drop/* /tmp/
+#/data/db/ sera el volumen usado para persistencia de sesion
+COPY drop/* usr/local/data/db/
 
+#CMD es lo mismo que ENTRYPOINT pero con otro formato
 CMD ["mongod", "--smallfiles", "--rest"]
